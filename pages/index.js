@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+// import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+// import { faSearch } from "@fortawesome/free-solid-svg-icons";
+// import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <main>
 
         <div className="header">
-          <FontAwesomeIcon icon={faWhatsapp} style={{ color: "white", padding: "0.3rem" }} />
+          {/* <FontAwesomeIcon icon={faWhatsapp} style={{ color: "white", padding: "0.3rem" }} /> */}
           <span className="messageHeader">Quer mais ofertas ou uma condição especial? Chama a gente no WhatsApp: (35) 9 9702-4673.</span>
         </div>
 
@@ -26,7 +26,7 @@ export default function Home() {
           </div>
 
           <div className="card cardTop2">
-            <FontAwesomeIcon icon={faSearch} style={{ color: "#023857", position: "absolute", padding: "10px", minWidth: "40px" }} />
+            {/* <FontAwesomeIcon icon={faSearch} style={{ color: "#023857", position: "absolute", padding: "10px", minWidth: "40px" }} /> */}
             <input className="searchBar" type="text" placeholder="O que você procura? Digite aqui..."></input>
           </div>
 
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
 
           <div className="card cardTop4">
-            <FontAwesomeIcon icon={faShoppingCart} style={{ color: "#023857" }} />
+            {/* <FontAwesomeIcon icon={faShoppingCart} style={{ color: "#023857" }} /> */}
           </div>
         </div>
 
