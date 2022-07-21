@@ -1,199 +1,211 @@
 import Head from 'next/head'
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Porto a Porto Acabamentos</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <title>Porto a Porto Acabamentos | O melhor para a sua obra!</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Porto a Porto Acabamentos
-        </h1>
 
-        <p className="description">
-          API em desenvolvimento
-        </p>
+        <div className="header">
+          <FontAwesomeIcon icon={faWhatsapp} style={{ color: "white", padding: "0.3rem" }} />
+          <span className="messageHeader">Quer mais ofertas ou uma condição especial? Chama a gente no WhatsApp: (35) 9 9702-4673.</span>
+        </div>
 
-        {/* <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <div className="grid">
+          <div className="card cardTop1">
+            <img className="logoTop" src="/logoPP.png" alt="Porto a Porto Acabamentos" />
+          </div>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <div className="card cardTop2">
+            <FontAwesomeIcon icon={faSearch} style={{ color: "#023857", position: "absolute", padding: "10px", minWidth: "40px" }} />
+            <input className="searchBar" type="text" placeholder="O que você procura? Digite aqui..."></input>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <div className="card cardTop3">
+          Olá, visitante! <strong>Entre</strong> ou <strong>Cadastre-se!</strong>
+          </div>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div> */}
+          <div className="card cardTop4">
+            <FontAwesomeIcon icon={faShoppingCart} style={{ color: "#023857" }} />
+          </div>
+        </div>
+
+        <div className="mainMenu">
+          <ul className="mainMenu">
+            <li>
+              <a href="#">
+                TODOS OS PRODUTOS
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                OFERTAS
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Revestimentos
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Móveis
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Louças e Metais
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Serviços
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Persianas
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Luminárias
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Telhas
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Papéis de Parede
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div className="slider">
+          <img className="sliderImg" src="/slider1.jpg" alt="Slider" />
+        </div>
+        
       </main>
 
-      <footer>
-        <a href="https://agenciastar.tec.br" target="_blank" rel="noopener noreferrer">
-          Powered by{' '}
-          <img src="/star.png" alt="Agência Star" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 3em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
+      <style jsx>
+        {`
+          .container {
+            min-height: 100vh;
+            padding: 0;
+            display: flex;
             flex-direction: column;
           }
-        }
-      `}</style>
+
+          main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .header {
+            display: flex;
+            background-color: #023857;
+            justify-content: center;
+            width: 100%;
+            padding: 0.3rem;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 0.9rem;
+          }
+
+          .messageHeader {
+            text-align: center;
+          }
+          
+          .grid {
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+            max-width: 100%;
+            margin-top: 1rem;
+            justify-content: center;
+          }
+
+          .card {
+            padding: 1rem;
+            text-align: left;
+            color: inherit;
+            align-self: center;
+          }
+
+          .cardTop1 { flex-basis: 15%; padding: 2rem; }
+          .cardTop2 { flex-basis: 30%; padding: 2rem; width: 100%; margin-bottom: 10px; }
+          .cardTop3 { flex-basis: 25%; padding: 2rem; }
+          .cardTop4 { flex-basis: 5%; padding: 2rem; }
+
+          .logoTop {
+            height: 100px;
+          }
+
+          .searchBar {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #023857;
+            border-radius: 2rem;
+          }
+
+          ul.mainMenu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #a1cb38;
+          }
+          
+          .mainMenu li {
+             float: left;
+          }
+          
+          .mainMenu li a {
+            display: block;
+            color: #1a1a1a;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+          }
+
+          .sliderImg {
+            width: 100%;
+          }
+
+        `}
+      </style>
 
       <style jsx global>{`
         html,
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
         }
 
         * {
