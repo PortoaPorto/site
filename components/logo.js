@@ -1,24 +1,28 @@
+import { FaSearch } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
+
 const Header = () => {
-    return (
-        <div className="grid">
-          <div className="card cardTop1">
-            <img className="logoTop" src="/logoPP.png" alt="Porto a Porto Acabamentos" />
-          </div>
-
-          <div className="card cardTop2">
-            {/* <FontAwesomeIcon icon={faSearch} style={{ color: "#023857", position: "absolute", padding: "10px", minWidth: "40px" }} /> */}
-            <input className="searchBar" type="text" placeholder="O que você procura? Digite aqui..."></input>
-          </div>
-
-          <div className="card cardTop3">
-          Olá, visitante! <strong>Entre</strong> ou <strong>Cadastre-se!</strong>
-          </div>
-
-          <div className="card cardTop4">
-            {/* <FontAwesomeIcon icon={faShoppingCart} style={{ color: "#023857" }} /> */}
-          </div>
+  return (
+    <ul className="flex-container">
+      <li className="flex-item-1">
+        <a href="/"><img className="logoTop" src="/logoPP.png" alt="Porto a Porto Acabamentos" /></a>
+      </li>
+      <li className="flex-item-2">
+        <div className="submitLine">
+          <input className="searchBar" type="text" />
+          <button className="submitLente" type="submit">
+          <FaSearch />
+          </button>
         </div>
-        );
-    };
+      </li>
+      <li className="flex-item-3">
+        Olá, visitante! <a href="#">Entre</a> ou <a href="#">Cadastre-se!</a>
+      </li>
+      <li className="flex-item-4">
+        <FaShoppingCart />
+      </li>
+    </ul>
+  );
+};
     
 export default Header;
